@@ -16,6 +16,7 @@ class ToDo{
 
 let lobinho = true
 let todo = []
+let plinio = 0
 
 function toDo(texto1, prioridade1)
 {
@@ -25,7 +26,7 @@ while(lobinho === true){
 texto1 = prompt("Insira um nome aleatório")
 prioridade1 = Number(prompt("Insira um número aleatório"))
 
-let plinio = new ToDo(texto1,prioridade1)
+ plinio = new ToDo(texto1,prioridade1)
 
 //verificando se tem algum objeto com as mesmas informações do plinio
 let verificacao = todo.some(verifica => verifica.texto === plinio.texto && verifica.prioridade === plinio.prioridade)
@@ -33,6 +34,7 @@ if(verificacao == false){
 
     todo.push(plinio)
     console.log(plinio)
+    console.log(todo)
 
 }
 else{
@@ -50,6 +52,37 @@ if(stp === 1){
 
 }
 }
-
-
 toDo();
+
+
+let allTexts = []
+
+
+function atualizarToDo(textoAntigo, textoNovo){
+
+textoAntigo = prompt("Digite o nome que deseja atualizar no cadastro:")
+textoNovo = prompt("Digite o novo nome:")
+
+let verificacao2 = todo.findIndex(verifica => verifica.texto === textoAntigo)
+if(verificacao2 !== -1){
+
+  todo[verificacao2].texto = textoNovo
+  console.log("Atualizado com sucesso")
+  console.log(todo)
+
+
+
+
+}
+else{
+
+console.log("Erro de ao atualizar, tente novamente")
+
+
+}
+}
+
+
+
+
+
