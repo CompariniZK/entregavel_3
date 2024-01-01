@@ -81,7 +81,47 @@ console.log("Erro de ao atualizar, tente novamente")
 
 }
 }
+let arrayConcluir = []
 
+function ConcluirToDo (textinho)
+
+{
+
+textinho = prompt("Insira um nome: ")
+
+let verifica3 = todo.findIndex(verifica => verifica.texto === textinho)
+if(verifica3 !== -1 )
+{
+
+todo[verifica3].feito = true
+return true;
+}
+
+else{
+
+  return false;
+}
+}
+
+function ExcluirToDo(textinho2){
+
+textinho2 = prompt("Digite um nome de cadastro para excluir:")
+let verifica4 = todo.findIndex(verifica => verifica.texto === textinho2)
+
+if(verifica4 !== -1){
+
+todo.splice(verifica4, 1)
+return true;
+
+} 
+else
+{
+
+  return false;
+
+
+}
+}
 
 
 
