@@ -35,11 +35,13 @@ if(verificacao == false){
     todo.push(plinio)
     console.log(plinio)
     console.log(todo)
+    
 
 }
 else{
 
     console.log("Já existe um objeto igual")
+
 }
 
 
@@ -71,14 +73,14 @@ if(verificacao2 !== -1){
   console.log(todo)
 
 
-
+return true;
 
 }
 else{
 
 console.log("Erro de ao atualizar, tente novamente")
 
-
+return false;
 }
 }
 let arrayConcluir = []
@@ -121,6 +123,30 @@ else
 
 
 }
+
+}
+
+arrayPesquisar = []
+
+function PesquisarToDo (textinho3){
+
+  textinho3 = prompt("Insira o texto para pesquisa de objeto:")
+  let verifica5 = todo.findIndex(verifica => verifica.texto === textinho3)
+
+  if(verifica5 !== -1){
+
+    console.log("Objeto encontrado");
+    return true;
+
+
+
+  }
+  else{
+
+    return false ;
+  }
+
+
 }
 
 
