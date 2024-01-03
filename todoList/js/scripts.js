@@ -60,7 +60,7 @@ toDo();
 let allTexts = []
 
 
-function atualizarToDo(textoAntigo, textoNovo){
+function AtualizarToDo(textoAntigo, textoNovo){
 
 textoAntigo = prompt("Digite o nome que deseja atualizar no cadastro:")
 textoNovo = prompt("Digite o novo nome:")
@@ -126,7 +126,7 @@ else
 
 }
 
-arrayPesquisar = []
+
 
 function PesquisarToDo (textinho3){
 
@@ -147,6 +147,27 @@ function PesquisarToDo (textinho3){
   }
 
 
+}
+
+function OrdenarCrescente(){
+
+
+todo.sort((a, b) => a.prioridade - b.prioridade);
+
+console.log("Objeto ordenado crescente")
+
+
+return todo
+
+}
+
+function OrdenarDecrescente(){
+
+
+todo.sort((a,b) => b.prioridade - a.prioridade)
+console.log("Objeto ordenado decrescente")
+
+return todo
 }
 
 
